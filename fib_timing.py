@@ -4,8 +4,8 @@ import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 
-# CPU Frequency in Hz (CHANGE this based on your system)
-CPU_FREQUENCY_HZ = 6500000000  # Example: 2.4 GHz = 2,400,000,000 Hz
+# CPU Frequency in Hz 
+CPU_FREQUENCY_HZ = 6500000000  
 
 # Function to get cycle count
 def get_cycle_count():
@@ -22,7 +22,7 @@ def recur_fibo(n):
     else:
         return recur_fibo(n - 1) + recur_fibo(n - 2)
 
-# Set CPU affinity to CPU 1 (if supported)
+# Set CPU affinity to CPU 1 
 try:
     os.sched_setaffinity(0, {1})
 except AttributeError:
